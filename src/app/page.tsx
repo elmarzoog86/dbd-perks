@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import iconsMap from "../data/icons-map.json";
 import portraitsMap from "../data/portraits.json";
 import tutorialsMap from "../data/tutorials.json";
+import countersMap from "../data/counters.json";
 
 type Role = "survivor" | "killer";
 type BuildStrategy = "gen-rush" | "haste" | "looping" | "aura" | string;
@@ -215,6 +216,10 @@ export default function Home() {
   const [killerName, setKillerName] = useState<string>("The Trapper");
   const [strategy, setStrategy] = useState<BuildStrategy>("territorial");
   const [buildIndex, setBuildIndex] = useState(0);
+  
+  // Specific states for Survivor tab switching
+  const [survivorTab, setSurvivorTab] = useState<"builds" | "counters">("builds");
+  const [counterKillerName, setCounterKillerName] = useState<string>("The Trapper");
 
   // Derived state based on role
   const currentAvailableBuilds = role === "survivor" 
@@ -346,160 +351,247 @@ export default function Home() {
           </button>
         </div>
 
-        {/* Killer Selection (Only visible if Killer Role is selected) */}
-        {role === "killer" && (
-          <div className="flex flex-wrap justify-center gap-4 mt-6">
-            {Object.keys(killerData).map(killer => (
-              <button
-                key={killer}
-                onClick={() => {
-                  setKillerName(killer);
-                  setStrategy(Object.keys(killerData[killer])[0]);
-                  setBuildIndex(0);
-                }}
-                className={`flex flex-col items-center p-3 rounded-2xl border transition-all w-28 ${
-                  killerName === killer 
-                    ? "bg-red-950/40 border-red-500/80 shadow-[0_0_20px_rgba(220,38,38,0.3)] scale-105" 
-                    : "bg-neutral-900 border-neutral-800 hover:border-neutral-600 hover:bg-neutral-800/80"
-                }`}
-              >
-                <div className={`w-16 h-16 rounded-full overflow-hidden mb-3 border-2 transition-colors ${killerName === killer ? "border-red-500 shadow-inner" : "border-neutral-700"} bg-neutral-950`}>
-                  <img
-                    src={(portraitsMap as Record<string, string>)[killer] || `https://ui-avatars.com/api/?name=${encodeURIComponent(killer)}&background=1a1a1a&color=fff`}
-                    alt={killer}
-                    referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity"
-                    onError={(e) => { 
-                      e.currentTarget.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(killer)}&background=1a1a1a&color=fff`; 
-                    }} 
-                  />
-                </div>
-                <span className={`text-xs font-bold text-center leading-tight ${killerName === killer ? "text-white" : "text-neutral-400"}`}>
-                  {killer}
-                </span>
-              </button>
-            ))}
+        {/* Survivor Sub-tabs */}
+        {role === "survivor" && (
+          <div className="flex justify-center gap-4 mt-6">
+            <button
+              onClick={() => setSurvivorTab("builds")}
+              className={`px-6 py-2 rounded-full font-bold transition-all border ${
+                survivorTab === 'builds' 
+                  ? "bg-blue-600/30 text-white border-blue-500/50 shadow-[0_0_10px_rgba(37,99,235,0.2)]" 
+                  : "bg-neutral-900 border-neutral-800 text-neutral-500 hover:text-neutral-300"
+              }`}
+            >
+              Meta Builds
+            </button>
+            <button
+              onClick={() => setSurvivorTab("counters")}
+              className={`px-6 py-2 rounded-full font-bold transition-all border ${
+                survivorTab === 'counters' 
+                  ? "bg-blue-600/30 text-white border-blue-500/50 shadow-[0_0_10px_rgba(37,99,235,0.2)]" 
+                  : "bg-neutral-900 border-neutral-800 text-neutral-500 hover:text-neutral-300"
+              }`}
+            >
+              How to Counter
+            </button>
           </div>
         )}
 
-        {/* Strategy Selection based on Role */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          {role === "survivor" ? (
-            <>
-              <StrategyButton id="gen-rush" name="Gen Rush" icon={<Zap size={18} />} />
-              <StrategyButton id="haste" name="Haste / Speed" icon={<Activity size={18} />} />
-              <StrategyButton id="looping" name="Chase / Looping" icon={<Activity size={18} />} />
-              <StrategyButton id="aura" name="Aura Reading" icon={<Activity size={18} />} />
-            </>
-          ) : (
-            // Dynamic generation of strategies specifically for the currently selected killer
-            Object.keys(killerData[killerName] || {}).map(strat => (
-              <StrategyButton 
-                key={strat} 
-                id={strat} 
-                name={strat.replace("-", " ")} 
-                icon={<Activity size={18} />} 
-              />
-            ))
-          )}
-        </div>
-
-        {/* Build Display */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={`${role}-${strategy}-${buildIndex}`}
-            initial={{ opacity: 0, scale: 0.98, y: 15 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.98, y: -15 }}
-            transition={{ duration: 0.2 }}
-            className={`rounded-2xl p-6 md:p-8 border shadow-xl transition-colors duration-500 relative z-10 bg-neutral-900/20 border-neutral-800/30 backdrop-blur-md`}
-          >
-            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 border-b border-neutral-800/50 pb-5">
-              <div>
-                <h2 className="text-2xl font-bold flex items-center gap-2">
-                  <span className="capitalize">{strategy.replace("-", " ")}</span> Synergy
-                </h2>
-                <p className="text-neutral-500 text-sm mt-1">Recommended setup for maximum efficiency</p>
+        {/* Counters View for Survivor */}
+        {role === "survivor" && survivorTab === "counters" && (
+          <div className="space-y-8 animate-in fade-in duration-500">
+            <div className="p-4 border border-neutral-800 rounded-xl bg-neutral-900/30 backdrop-blur-md shadow-inner overflow-hidden">
+              <h3 className="text-center font-semibold text-neutral-400 mb-4 tracking-wider uppercase text-sm">Select a Killer to Counter</h3>
+              <div className="flex flex-row overflow-x-auto justify-start lg:justify-center gap-3 pb-2 custom-scrollbar">
+                {Object.keys(killerData).map(killer => (
+                  <button
+                    key={killer}
+                    onClick={() => setCounterKillerName(killer)}
+                    className={`flex-shrink-0 flex flex-col items-center p-2 rounded-xl border transition-all w-24 ${
+                      counterKillerName === killer 
+                        ? "bg-blue-900/40 border-blue-500/80 shadow-[0_0_15px_rgba(37,99,235,0.3)] scale-105" 
+                        : "bg-neutral-900 border-neutral-800 hover:border-neutral-600 hover:bg-neutral-800/80"
+                    }`}
+                  >
+                    <div className={`w-14 h-14 rounded-full overflow-hidden mb-2 border-2 transition-colors ${counterKillerName === killer ? "border-blue-500 shadow-inner" : "border-neutral-700"} bg-neutral-950`}>
+                      <img
+                        src={(portraitsMap as Record<string, string>)[killer] || `https://ui-avatars.com/api/?name=${encodeURIComponent(killer)}&background=1a1a1a&color=fff`}
+                        alt={killer}
+                        className="w-full h-full object-cover opacity-90 hover:opacity-100"
+                      />
+                    </div>
+                    <span className={`text-[10px] font-bold text-center leading-tight ${counterKillerName === killer ? "text-white" : "text-neutral-400"}`}>
+                      {killer}
+                    </span>
+                  </button>
+                ))}
               </div>
-              <button 
-                onClick={handleRefresh}
-                className="flex items-center gap-2 px-5 py-2.5 bg-neutral-800 hover:bg-neutral-700 active:bg-neutral-600 rounded-lg text-sm font-semibold transition-colors text-white border border-neutral-700"
-              >
-                <RefreshCw size={18} />
-                Refresh Build
-              </button>
             </div>
 
-            <div className="space-y-8">
-              {/* Perks */}
-              <div>
-                <h3 className="text-sm font-bold text-neutral-500 mb-4 uppercase tracking-widest flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-neutral-600" /> Essential Perks
-                </h3>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-                  {activeBuild.perks.map((perkName, i) => {
-                    const perkInfo = getPerkInfo(perkName);
-                    return (
-                      <div key={i} className={`relative group aspect-square border border-neutral-700/50 rounded-xl p-4 flex flex-col items-center justify-center text-center hover:border-neutral-500 transition-all hover:-translate-y-1 hover:shadow-lg z-10 hover:z-50 bg-neutral-800/10 backdrop-blur-sm`}>
-                          <div className={`w-16 h-16 rotate-45 mb-4 flex items-center justify-center shadow-inner overflow-hidden border-2 border-neutral-700/50 group-hover:border-neutral-500 transition-colors bg-neutral-900/60 backdrop-blur-md`}>
-                            <AssetIcon name={perkName} type="perks" className="-rotate-45 w-[140%] h-[140%] max-w-none drop-shadow-2xl object-contain object-center scale-110 opacity-100" />
-                          </div>
-
-                        {/* Name label beneath the perk */}
-                        <span className="text-sm font-bold text-neutral-200 mt-2 leading-tight z-10 drop-shadow-md">{perkName}</span>
-                        
-                        {/* Hover Tooltip - Ensure tooltip is properly layered and readable */}
-                        <div className="absolute top-full mt-3 w-64 p-4 bg-neutral-900 border border-neutral-600 rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all shadow-2xl z-50 pointer-events-none flex flex-col gap-3">
-                          <p className="font-bold text-sm text-blue-400 border-b border-neutral-700 pb-2">{perkInfo.name}</p>
-                          <p className="text-xs text-neutral-300 text-left leading-relaxed">{perkInfo.descEn}</p>
-                          <p className="text-xs text-neutral-400 text-right leading-relaxed font-bold" dir="rtl">{perkInfo.descAr}</p>
-                        </div>
-                    </div>
-                    );
-                  })}
-                </div>
-              </div>
-
-              {/* Items / Addons */}
-              <div>
-                <h3 className="text-sm font-bold text-neutral-500 mb-4 uppercase tracking-widest flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-neutral-600" />
-                  {role === "survivor" ? "Optimal Item Setup" : "Recommended Add-ons"}
-                </h3>
-                <div className="bg-neutral-950/10 backdrop-blur-sm rounded-xl p-5 border border-neutral-800/80 flex flex-col md:flex-row items-center gap-6">
-                  
-                  {/* Item/Power Icon */}
-                  <div className="w-16 h-16 border border-neutral-700/50 rounded flex items-center justify-center shadow-inner group overflow-hidden shrink-0 bg-neutral-900/60 backdrop-blur-md">
-                    <AssetIcon 
-                      name={activeBuild.equipment.name} 
-                      type={role === "survivor" ? "items" : "powers"} 
-                      className="w-12 h-12 rotate-[-5deg] group-hover:rotate-0 transition-transform opacity-100 drop-shadow-xl" 
-                    />
-                  </div>
-                  
-                  <div className="flex-1 w-full text-center md:text-left">
-                    <span className="font-bold text-white text-lg block drop-shadow-md">{activeBuild.equipment.name}</span>
-                    <p className="text-sm font-medium text-neutral-500 mt-1">{role === "survivor" ? "Held Item" : "Killer Power"}</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Tutorial / Strategy Guide - New Section Added */}
-              {role === "killer" && tutorialsMap[killerName as keyof typeof tutorialsMap] && (
-                <div className="mt-8 bg-blue-900/10 border border-blue-800/30 rounded-xl p-5 md:p-6 opacity-90 hover:opacity-100 transition-opacity">
-                  <h3 className="text-sm font-bold text-blue-400 mb-2 uppercase tracking-widest flex items-center gap-2">
-                    <Activity size={16} /> Quick Strategy Guide
-                  </h3>
-                  <p className="text-neutral-300 text-sm md:text-base leading-relaxed">
-                    {(tutorialsMap[killerName as keyof typeof tutorialsMap] as Record<string, string>)[strategy] || 
-                     "Use your core power effectively while monitoring your overall map pressure. Your perks will carry you through chases and generator slowdown organically."}
+            <div className="bg-neutral-900/40 backdrop-blur-md rounded-2xl p-8 border border-neutral-700/50 shadow-2xl relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-1 bg-blue-500 h-full"></div>
+              <h2 className="text-3xl font-bold flex items-center gap-3 drop-shadow-md mb-6">
+                <span className="text-blue-400">Countering</span> {counterKillerName}
+              </h2>
+              
+              <div className="space-y-6">
+                <div className="bg-neutral-950/50 rounded-lg p-5 border border-neutral-800">
+                  <span className="text-xs uppercase font-bold text-neutral-500 mb-2 block tracking-widest">English Strategy</span>
+                  <p className="text-lg text-neutral-200 leading-relaxed font-medium">
+                    {(countersMap as any)[counterKillerName]?.en || (countersMap as any)["default"].en}
                   </p>
                 </div>
-              )}
 
+                <div className="bg-neutral-950/50 rounded-lg p-5 border border-neutral-800 text-right" dir="rtl">
+                  <span className="text-xs uppercase font-bold text-neutral-500 mb-2 block tracking-widest font-sans">الشرح بالكويتي</span>
+                  <p className="text-2xl text-amber-400 leading-relaxed font-bold drop-shadow-sm">
+                    {(countersMap as any)[counterKillerName]?.ar || (countersMap as any)["default"].ar}
+                  </p>
+                </div>
+              </div>
             </div>
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        )}
+
+        {/* Main Content Wrapper for Builds (Visible if Killer OR Survivor on 'builds' tab) */}
+        {(role === "killer" || (role === "survivor" && survivorTab === "builds")) && (
+          <div className="space-y-8 animate-in fade-in duration-500">
+            {/* Killer Selection (Only visible if Killer Role is selected) */}
+            {role === "killer" && (
+              <div className="flex flex-wrap justify-center gap-4 mt-6">
+                {Object.keys(killerData).map(killer => (
+                  <button
+                    key={killer}
+                    onClick={() => {
+                      setKillerName(killer);
+                      setStrategy(Object.keys(killerData[killer])[0]);
+                      setBuildIndex(0);
+                    }}
+                    className={`flex flex-col items-center p-3 rounded-2xl border transition-all w-28 ${
+                      killerName === killer 
+                        ? "bg-red-950/40 border-red-500/80 shadow-[0_0_20px_rgba(220,38,38,0.3)] scale-105" 
+                        : "bg-neutral-900 border-neutral-800 hover:border-neutral-600 hover:bg-neutral-800/80"
+                    }`}
+                  >
+                    <div className={`w-16 h-16 rounded-full overflow-hidden mb-3 border-2 transition-colors ${killerName === killer ? "border-red-500 shadow-inner" : "border-neutral-700"} bg-neutral-950`}>
+                      <img
+                        src={(portraitsMap as Record<string, string>)[killer] || `https://ui-avatars.com/api/?name=${encodeURIComponent(killer)}&background=1a1a1a&color=fff`}
+                        alt={killer}
+                        referrerPolicy="no-referrer"
+                        className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity"
+                        onError={(e) => { 
+                          e.currentTarget.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(killer)}&background=1a1a1a&color=fff`; 
+                        }} 
+                      />
+                    </div>
+                    <span className={`text-xs font-bold text-center leading-tight ${killerName === killer ? "text-white" : "text-neutral-400"}`}>
+                      {killer}
+                    </span>
+                  </button>
+                ))}
+              </div>
+            )}
+
+            {/* Strategy Selection based on Role */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+              {role === "survivor" ? (
+                <>
+                  <StrategyButton id="gen-rush" name="Gen Rush" icon={<Zap size={18} />} />
+                  <StrategyButton id="haste" name="Haste / Speed" icon={<Activity size={18} />} />
+                  <StrategyButton id="looping" name="Chase / Looping" icon={<Activity size={18} />} />
+                  <StrategyButton id="aura" name="Aura Reading" icon={<Activity size={18} />} />
+                </>
+              ) : (
+                // Dynamic generation of strategies specifically for the currently selected killer
+                Object.keys(killerData[killerName] || {}).map(strat => (
+                  <StrategyButton 
+                    key={strat} 
+                    id={strat} 
+                    name={strat.replace("-", " ")} 
+                    icon={<Activity size={18} />} 
+                  />
+                ))
+              )}
+            </div>
+
+            {/* Build Display */}
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={`${role}-${strategy}-${buildIndex}`}
+                initial={{ opacity: 0, scale: 0.98, y: 15 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.98, y: -15 }}
+                transition={{ duration: 0.2 }}
+                className={`rounded-2xl p-6 md:p-8 border shadow-xl transition-colors duration-500 relative z-10 bg-neutral-900/20 border-neutral-800/30 backdrop-blur-md`}
+              >
+                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 border-b border-neutral-800/50 pb-5">
+                  <div>
+                    <h2 className="text-2xl font-bold flex items-center gap-2">
+                      <span className="capitalize">{strategy.replace("-", " ")}</span> Synergy
+                    </h2>
+                    <p className="text-neutral-500 text-sm mt-1">Recommended setup for maximum efficiency</p>
+                  </div>
+                  <button 
+                    onClick={handleRefresh}
+                    className="flex items-center gap-2 px-5 py-2.5 bg-neutral-800 hover:bg-neutral-700 active:bg-neutral-600 rounded-lg text-sm font-semibold transition-colors text-white border border-neutral-700"
+                  >
+                    <RefreshCw size={18} />
+                    Refresh Build
+                  </button>
+                </div>
+
+                <div className="space-y-8">
+                  {/* Perks */}
+                  <div>
+                    <h3 className="text-sm font-bold text-neutral-500 mb-4 uppercase tracking-widest flex items-center gap-2">
+                      <div className="w-2 h-2 rounded-full bg-neutral-600" /> Essential Perks
+                    </h3>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                      {activeBuild.perks.map((perkName, i) => {
+                        const perkInfo = getPerkInfo(perkName);
+                        return (
+                          <div key={i} className={`relative group aspect-square border border-neutral-700/50 rounded-xl p-4 flex flex-col items-center justify-center text-center hover:border-neutral-500 transition-all hover:-translate-y-1 hover:shadow-lg z-10 hover:z-50 bg-neutral-800/10 backdrop-blur-sm`}>
+                              <div className={`w-16 h-16 rotate-45 mb-4 flex items-center justify-center shadow-inner overflow-hidden border-2 border-neutral-700/50 group-hover:border-neutral-500 transition-colors bg-neutral-900/60 backdrop-blur-md`}>
+                                <AssetIcon name={perkName} type="perks" className="-rotate-45 w-[140%] h-[140%] max-w-none drop-shadow-2xl object-contain object-center scale-110 opacity-100" />
+                              </div>
+
+                            {/* Name label beneath the perk */}
+                            <span className="text-sm font-bold text-neutral-200 mt-2 leading-tight z-10 drop-shadow-md">{perkName}</span>
+                            
+                            {/* Hover Tooltip - Ensure tooltip is properly layered and readable */}
+                            <div className="absolute top-full mt-3 w-64 p-4 bg-neutral-900 border border-neutral-600 rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all shadow-2xl z-50 pointer-events-none flex flex-col gap-3">
+                              <p className="font-bold text-sm text-blue-400 border-b border-neutral-700 pb-2">{perkInfo.name}</p>
+                              <p className="text-xs text-neutral-300 text-left leading-relaxed">{perkInfo.descEn}</p>
+                              <p className="text-xs text-neutral-400 text-right leading-relaxed font-bold" dir="rtl">{perkInfo.descAr}</p>
+                            </div>
+                        </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+
+                  {/* Items / Addons */}
+                  <div>
+                    <h3 className="text-sm font-bold text-neutral-500 mb-4 uppercase tracking-widest flex items-center gap-2">
+                      <div className="w-2 h-2 rounded-full bg-neutral-600" />
+                      {role === "survivor" ? "Optimal Item Setup" : "Recommended Add-ons"}
+                    </h3>
+                    <div className="bg-neutral-950/10 backdrop-blur-sm rounded-xl p-5 border border-neutral-800/80 flex flex-col md:flex-row items-center gap-6">
+                      
+                      {/* Item/Power Icon */}
+                      <div className="w-16 h-16 border border-neutral-700/50 rounded flex items-center justify-center shadow-inner group overflow-hidden shrink-0 bg-neutral-900/60 backdrop-blur-md">
+                        <AssetIcon 
+                          name={activeBuild.equipment.name} 
+                          type={role === "survivor" ? "items" : "powers"} 
+                          className="w-12 h-12 rotate-[-5deg] group-hover:rotate-0 transition-transform opacity-100 drop-shadow-xl" 
+                        />
+                      </div>
+                      
+                      <div className="flex-1 w-full text-center md:text-left">
+                        <span className="font-bold text-white text-lg block drop-shadow-md">{activeBuild.equipment.name}</span>
+                        <p className="text-sm font-medium text-neutral-500 mt-1">{role === "survivor" ? "Held Item" : "Killer Power"}</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Tutorial / Strategy Guide - New Section Added */}
+                  {role === "killer" && tutorialsMap[killerName as keyof typeof tutorialsMap] && (
+                    <div className="mt-8 bg-blue-900/10 border border-blue-800/30 rounded-xl p-5 md:p-6 opacity-90 hover:opacity-100 transition-opacity">
+                      <h3 className="text-sm font-bold text-blue-400 mb-2 uppercase tracking-widest flex items-center gap-2">
+                        <Activity size={16} /> Quick Strategy Guide
+                      </h3>
+                      <p className="text-neutral-300 text-sm md:text-base leading-relaxed">
+                        {(tutorialsMap[killerName as keyof typeof tutorialsMap] as Record<string, string>)[strategy] || 
+                         "Use your core power effectively while monitoring your overall map pressure. Your perks will carry you through chases and generator slowdown organically."}
+                      </p>
+                    </div>
+                  )}
+
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+        )}
 
       </div>
     </main>

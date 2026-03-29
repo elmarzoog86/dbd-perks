@@ -1,0 +1,50 @@
+{
+  "default": {
+    "en": "Keep your eyes peeled and avoid unneeded risks. Try to pre-drop pallets if they play aggressively, and focus on generators during long chases.",
+    "ar": "فتح عينك ولا تغامر عالفاضي. طيح الخشب (الباليت) مبجر إذا شفته طاير عليك، وركزوا عـ المكاين إذا طول واهو يطرد واحد منكم."
+  },
+  "The Trapper": {
+    "en": "Watch your step in tall grass and vaulting locations. Try to disarm traps when he is far away or busy carrying someone.",
+    "ar": "دير بالك وين تدوس بالزرع الفياي وتحت الدرايش. حاول تفك الفخوخ إذا كان بعيد أو لاهي شايل واحد من ربعك."
+  },
+  "The Nurse": {
+    "en": "Break line of sight as much as possible. Double back when she charges her blink to throw off her distance.",
+    "ar": "انخش ورا الطوف ولا تخليه يشوفك وايد. إذا شحنت البلينك مالها، ارجع عليها فجأة وخلها تضيع المسافة."
+  },
+  "The Hillbilly": {
+    "en": "Listen for the chainsaw rev. Hug structures tightly and force him to turn at awkward angles.",
+    "ar": "اسمع صوت المنشار عدل. لزق بالطوف وخليه يلف بزاويات صعبة عشان ما يطيحك بضربة."
+  },
+  "The Shape": {
+    "en": "Keep looking around. Do not let him stalk you for free to prevent his Tier 3 instadown.",
+    "ar": "تلفت يمين ويسار. لا تخليه يخزك ويبصبص عليك ببلاش عشان ما يوصل تير 3 ويطيحك بضربة."
+  },
+  "The Ghost Face": {
+    "en": "Reveal him by looking at him when he stalks. Keep your camera moving while on a generator.",
+    "ar": "اكشفه وطلّع عينه إذا شفته يخزك. ركز وحرك الكاميرا دايم يمين ويسار وانت تصلح المكينة عشان ما يغدر فيك."
+  },
+  "The Singularity": {
+    "en": "Use the EMPs to disable biopods and remove the slipstream from yourself or teammates.",
+    "ar": "استخدم القطع (EMPs) عشان تعطل كاميراته، وشيل اللزقة القثيثة عنك وعن ربعك بأسرع وقت."
+  },
+  "The Spirit": {
+    "en": "Listen closely to her phasing sound. Walk instead of running to hide your scratch marks when she phases.",
+    "ar": "اسمع صوت هوسة الروح مالتها عدل. امشي لا تركض عشان ما تخلي أثر (شموخ) بالأرض واهي تلحقك."
+  },
+  "The Legion": {
+    "en": "Spread out across the map. Do not heal fully against their frenzy, just mend and stay on generators.",
+    "ar": "تطشروا بالخريطة ولا تتيمعون. لا تعالجون فل إذا ضربكم بالركضة، بس خيطوا الجرح وردوا كملوا المكاين."
+  },
+  "The Plague": {
+    "en": "Do not cleanse at fountains unless absolutely necessary (like endgame or everyone is infected and broken).",
+    "ar": "لا تغسلون بالماي مالها إلا للضرورة القصوى (إلّا إذا كلكم مرضى وطايحين، أو بالنهاية)، تره تعطيها قوتها العودة."
+  },
+  "The Huntress": {
+    "en": "Watch her wind-up animation. Crouch behind low obstacles and break line of sight frequently.",
+    "ar": "راقب حركتها لا يت بتشير الفأس. انزل (كراوتش) ورا الأغراض القصيرة، وزبن ورا الطوف عشان تفك نفسك."
+  },
+  "The Blight": {
+    "en": "Watch his rush angles. Spin tightly or hide behind weird collisions so he slides off them.",
+    "ar": "دير بالك من طمرته. لف عليه لفة قوية أو انخش ورا الطوف المعوية عشان يزلق وما يصيدك."
+  }
+}
