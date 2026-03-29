@@ -69,6 +69,36 @@ const PERKS_DB: Record<string, PerkInfo> = {
     descEn: "After hooking a Survivor, the next generator you kick instantly loses 20% of its current progress.",
     descAr: "بعد تعليق ناجٍ، يفقد المولد التالي الذي تضربه 20% من تقدمه الحالي فورًا."
   },
+  "Dark Arrogance": {
+    "name": "Dark Arrogance",
+    "descEn": "Increases Vault speed by 25%. Increases duration of Pallet Stuns by 25%.",
+    "descAr": "يزيد من سرعة القفز عبر النوافذ بنسبة 25%. يزيد من مدة الدوار عند ضربك بلوح بنسبة 25%."
+  },
+  "Hardened": {
+    "name": "Hardened",
+    "descEn": "Prevents screaming. After unlocking a chest or cleansing/blessing a totem, see the killer's aura when they are in range.",
+    "descAr": "يمنع الصراخ. بعد فتح صندوق أو تطهير توتم، ترى هالة القاتل عندما يكون قريباً."
+  },
+  "Languish": {
+    "name": "Languish",
+    "descEn": "Survivors within your terror radius have their healing speed reduced by 25%.",
+    "descAr": "الناجون داخل نطاق الرعب الخاص بك تقل سرعة شفائهم بنسبة 25%."
+  },
+  "Scourge Hook: Dominance": {
+    "name": "Scourge Hook: Dominance",
+    "descEn": "After hooking on a Scourge Hook, the next generator worked on is blocked for a duration.",
+    "descAr": "بعد التعليق على خطاف الموت، يتم حظر المولد التالي الذي يتم العمل عليه لفترة."
+  },
+  "Human Greed": {
+    "name": "Human Greed",
+    "descEn": "Allows you to see the auras of unopened chests. You can close opened chests to gain a speed boost.",
+    "descAr": "يسمح لك برؤية هالات الصناديق غير المفتوحة. يمكنك إغلاق الصناديق المفتوحة للحصول على زيادة في السرعة."
+  },
+  "Weave Attunement": {
+    "name": "Weave Attunement",
+    "descEn": "When an item is dropped, its aura is revealed. Survivors near dropped items have their auras revealed.",
+    "descAr": "عند سقوط عنصر، يتم الكشف عن هالته. الناجون القريبون من العناصر الساقطة يتم الكشف عن هالاتهم."
+  },
   "default": {
     name: "Perk",
     descEn: "Equippable perk that provides a unique advantage in the trial.",
@@ -210,7 +240,7 @@ const killerData: Record<string, Record<string, Build[]>> = {
     "hallucination": [{ perks: ["Unforeseen", "Pop Goes the Weasel", "Corrupt Intervention", "Lethal Pursuer"], equipment: { name: "UVX", addons: ["Blurry Photo", "Vanish Drop"] } }]
   },
   "The Dark Lord": {
-    "versatile-form": [{ perks: ["Lethal Pursuer", "Pop Goes the Weasel", "Scourge Hook: Pain Resonance", "Bamboozle"], equipment: { name: "Wolf, Bat, Mist", addons: ["Watchful Eye", "Lapis Lazuli"] } }]
+    "versatile-form": [{ perks: ["Dark Arrogance", "Lethal Pursuer", "Pop Goes the Weasel", "Scourge Hook: Pain Resonance"], equipment: { name: "Wolf, Bat, Mist", addons: ["Watchful Eye", "Lapis Lazuli"] } }]
   },
   "The Houndmaster": {
     "scent-tracker": [{ perks: ["Discordance", "Lethal Pursuer", "Jolt", "Save the Best for Last"], equipment: { name: "Falconer", addons: ["Leather Glove", "Scent Tracker"] } }]
