@@ -105,5 +105,17 @@
   },
   "The Unknown": {
     "hallucination-snipe": "Launch UVX projectiles at the floor/walls next to survivors. Use your hallucinations to teleport and maintain map presence."
+  },
+  "The Dark Lord": {
+    "default": "Focus on using your unique power to control loops and apply map pressure."
+  },
+  "The Houndmaster": {
+    "default": "Focus on using your unique power to control loops and apply map pressure."
+  },
+  "The First": {
+    "default": "Focus on using your unique power to control loops and apply map pressure."
+  },
+  "The Animatronic": {
+    "default": "Focus on using your unique power to control loops and apply map pressure."
   }
 }
