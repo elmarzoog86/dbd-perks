@@ -1,0 +1,109 @@
+{
+  "The Trapper": {
+    "territorial": "Lock down a 3-gen area early. Set traps on key loops and tall grass. Play defensive.",
+    "basement": "Get an early down near the basement or use Agitation to carry them. Trap the entrances heavily."
+  },
+  "The Wraith": {
+    "hit-and-run": "Uncloak, get a quick hit, and cloak again to drop chase. Keep applying map-wide pressure until everyone is injured."
+  },
+  "The Hillbilly": {
+    "lethal-chase": "Use your sprint to cross the map quickly. Rely on Bamboozle to force survivors into the open."
+  },
+  "The Nurse": {
+    "aura-slugging": "Use Lethal Pursuer to start your first chase instantly. Blink to auras revealed by Infectious Fright."
+  },
+  "The Shape": {
+    "tombstone": "Play passively early on. Stalk as much as possible until you pop Tier 3, then surprise them with instant kills.",
+    "scratched-mirror": "With 0 terror radius, see survivor auras through walls and ambush them around corners. Avoid standard loops."
+  },
+  "The Hag": {
+    "territorial": "Set up a triangle of 3 generators early. Place your traps tightly around loops and choke points in that area."
+  },
+  "The Doctor": {
+    "impossible-skillcheck": "Shock survivors constantly to keep them in Madness Tier 2 or 3. Their skill checks will be very difficult."
+  },
+  "The Huntress": {
+    "aura-sniper": "Aura reading is your bread and butter. Look for distant targets and practice long-range hatchet throws."
+  },
+  "The Cannibal": {
+    "basement-defense": "Get an early basement hook. If survivors come for a save, rev your chainsaw at the stairs."
+  },
+  "The Nightmare": {
+    "endgame": "Play a normal match, but prepare for the exit gates. Blood Warden and No Way Out give you massive snowball potential."
+  },
+  "The Pig": {
+    "headtrap-stall": "Sneak up on survivors to secure an early down. Apply a Reverse Bear Trap immediately, forcing them to search boxes."
+  },
+  "The Clown": {
+    "chase-denial": "Throw a pink bottle at loops to slow them down, and use your yellow bottle for a speed boost."
+  },
+  "The Spirit": {
+    "hit-and-run": "Phase walk toward generators to get quick first hits. Listen closely since they cannot hear you approaching."
+  },
+  "The Legion": {
+    "mend-simulator": "Use Feral Frenzy to injure multiple survivors quickly. Apply deep wounds to everyone to waste their time."
+  },
+  "The Plague": {
+    "anti-heal": "Vomit on generators, pallets, and survivors. Force them to stay broken. Grab Corrupt Purge if they dare cleanse."
+  },
+  "The Ghost Face": {
+    "stealth-stalk": "Lean around corners to stalk survivors faster. 99% their stalk meter, then expose and instadown them out of nowhere."
+  },
+  "The Demogorgon": {
+    "portal-pressure": "Place portals near high-traffic generators. Use shred to break pallets instantly or catch survivors locked in vault animations."
+  },
+  "The Oni": {
+    "slug-snowball": "Hit survivors early to gather blood. Unleash Blood Fury to instadown multiple targets across the map."
+  },
+  "The Deathslinger": {
+    "ranged-zoning": "Shoot survivors over short loops and pull them in for a hit. Reload quickly and keep punishing greed."
+  },
+  "The Executioner": {
+    "cages-torment": "Force survivors onto your Torment trails at loops so you can send them to Cages of Atonement."
+  },
+  "The Blight": {
+    "lethal-rush": "Bounce off geometry to catch up to survivors incredibly fast. Predict their movement and strike."
+  },
+  "The Twins": {
+    "slug-camp": "Use Victor to scout and down injured survivors, leaving Charlotte to defend hooks and important generators."
+  },
+  "The Trickster": {
+    "chase-denial": "Throw knives to slowly build up Laceration on survivors until they take a health state of damage."
+  },
+  "The Nemesis": {
+    "rapid-fire": "Lacerate survivors over low loops with your knives. Keep distance to maximize your punishment over pallets and windows."
+  },
+  "The Cenobite": {
+    "anti-loop": "Use your chains to slow survivors down at loops. Protect the puzzle box to initiate Chain Hunts continuously."
+  },
+  "The Artist": {
+    "crow-sniper": "Shoot birds directly at generators to check for survivors, or place them at loops to deny pathing."
+  },
+  "The Onryo": {
+    "tape-condemn": "Teleport constantly to build Condemned on survivors, forcing them to turn off TVs instead of doing generators."
+  },
+  "The Dredge": {
+    "nightfall-ambush": "Stay inside lockers near high-activity areas. Utilize Nightfall to strip survivors of their visibility while chasing."
+  },
+  "The Mastermind": {
+    "zombie-pressure": "Whip survivors over pallets with your tentacle. Use the zombies to patrol areas passively while you chase."
+  },
+  "The Knight": {
+    "jailer-patrol": "Send out your guards to check generators or break pallets for you. Pincer survivors between you and your guards."
+  },
+  "The Skull Merchant": {
+    "drone-defense": "Place drones on important generators and choke points. Chase survivors into your active drone zones to expose them."
+  },
+  "The Singularity": {
+    "slipstream-chase": "Shoot your pods at high vantage points. Mark survivors with slipstream to teleport instantly behind them in chases."
+  },
+  "The Xenomorph": {
+    "tunnel-ambush": "Use your tunnels to cross the map quickly. Emerge near generators and use your tail strike over loops to hit survivors."
+  },
+  "The Good Guy": {
+    "scamper-chase": "Use Hidey-Ho mode to rapidly close the distance. Scamper under pallets and deliver a massive slicing attack."
+  },
+  "The Unknown": {
+    "hallucination-snipe": "Launch UVX projectiles at the floor/walls next to survivors. Use your hallucinations to teleport and maintain map presence."
+  }
+}

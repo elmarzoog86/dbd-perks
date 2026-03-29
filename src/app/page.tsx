@@ -5,6 +5,7 @@ import { RefreshCw, Shield, Swords, Zap, Activity } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import iconsMap from "../data/icons-map.json";
 import portraitsMap from "../data/portraits.json";
+import tutorialsMap from "../data/tutorials.json";
 
 type Role = "survivor" | "killer";
 type BuildStrategy = "gen-rush" | "haste" | "looping" | "aura" | string;
@@ -489,6 +490,19 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+
+              {/* Tutorial / Strategy Guide - New Section Added */}
+              {role === "killer" && tutorialsMap[killerName as keyof typeof tutorialsMap] && (
+                <div className="mt-8 bg-blue-900/10 border border-blue-800/30 rounded-xl p-5 md:p-6 opacity-90 hover:opacity-100 transition-opacity">
+                  <h3 className="text-sm font-bold text-blue-400 mb-2 uppercase tracking-widest flex items-center gap-2">
+                    <Activity size={16} /> Quick Strategy Guide
+                  </h3>
+                  <p className="text-neutral-300 text-sm md:text-base leading-relaxed">
+                    {(tutorialsMap[killerName as keyof typeof tutorialsMap] as Record<string, string>)[strategy] || 
+                     "Use your core power effectively while monitoring your overall map pressure. Your perks will carry you through chases and generator slowdown organically."}
+                  </p>
+                </div>
+              )}
 
             </div>
           </motion.div>
