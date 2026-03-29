@@ -208,6 +208,18 @@ const killerData: Record<string, Record<string, Build[]>> = {
   },
   "The Unknown": {
     "hallucination": [{ perks: ["Unforeseen", "Pop Goes the Weasel", "Corrupt Intervention", "Lethal Pursuer"], equipment: { name: "UVX", addons: ["Blurry Photo", "Vanish Drop"] } }]
+  },
+  "The Dark Lord": {
+    "versatile-form": [{ perks: ["Lethal Pursuer", "Pop Goes the Weasel", "Scourge Hook: Pain Resonance", "Bamboozle"], equipment: { name: "Wolf, Bat, Mist", addons: ["Watchful Eye", "Lapis Lazuli"] } }]
+  },
+  "The Houndmaster": {
+    "scent-tracker": [{ perks: ["Discordance", "Lethal Pursuer", "Jolt", "Save the Best for Last"], equipment: { name: "Falconer", addons: ["Leather Glove", "Scent Tracker"] } }]
+  },
+  "The First": {
+    "primal-fear": [{ perks: ["Corrupt Intervention", "Nowhere to Hide", "Sloppy Butcher", "No Way Out"], equipment: { name: "Primal Roar", addons: ["Torn Cloth", "Sharp Claws"] } }]
+  },
+  "The Animatronic": {
+    "jumpscare": [{ perks: ["Monitor & Abuse", "Discordance", "Hex: Devour Hope", "Lethal Pursuer"], equipment: { name: "Circuitry", addons: ["Old Battery", "Rusty Springs"] } }]
   }
 };
 
