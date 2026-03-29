@@ -423,7 +423,7 @@ export default function Home() {
                 </div>
 
                 <div className="bg-neutral-950/50 rounded-lg p-5 border border-neutral-800 text-right" dir="rtl">
-                  <span className="text-xs uppercase font-bold text-neutral-500 mb-2 block tracking-widest font-sans">الشرح بالكويتي</span>
+                  <span className="text-xs uppercase font-bold text-neutral-500 mb-2 block tracking-widest font-sans">الشرح بالعربي</span>
                   <p className="text-2xl text-amber-400 leading-relaxed font-bold drop-shadow-sm">
                     {(countersMap as any)[counterKillerName]?.ar || (countersMap as any)["default"].ar}
                   </p>
