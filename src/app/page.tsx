@@ -301,7 +301,7 @@ export default function Home() {
       <main 
         className="min-h-screen text-neutral-100 p-4 md:p-8 flex flex-col items-center justify-start py-12 font-sans transition-all duration-700 bg-neutral-950"
         style={{
-          backgroundImage: role === "survivor" ? `linear-gradient(to bottom, rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.95)), url('/survivor-bg.jpg')` : 'none',
+          backgroundImage: role === "survivor" ? `linear-gradient(to bottom, rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.95)), url('/survivor-bg.png')` : 'none',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed',
