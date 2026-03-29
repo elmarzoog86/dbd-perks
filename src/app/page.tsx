@@ -301,7 +301,7 @@ export default function Home() {
       <main 
         className="min-h-screen text-neutral-100 p-4 md:p-8 flex flex-col items-center justify-start py-12 font-sans transition-all duration-700 bg-neutral-950"
         style={{
-          backgroundImage: role === "survivor" ? `linear-gradient(to bottom, rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.95)), url('/survivor-bg.png')` : 'none',
+          backgroundImage: role === "survivor" ? `linear-gradient(to bottom, rgba(10, 10, 10, 0.4), rgba(10, 10, 10, 0.6)), url('/survivor-bg.png')` : 'none',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed',
@@ -412,9 +412,9 @@ export default function Home() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.98, y: -15 }}
             transition={{ duration: 0.2 }}
-            className="bg-neutral-900 rounded-2xl p-6 md:p-8 border border-neutral-800 shadow-xl"
+            className={`rounded-2xl p-6 md:p-8 border shadow-xl transition-colors duration-500 relative z-10 ${role === 'survivor' ? 'bg-neutral-900/40 border-neutral-800/40 backdrop-blur-md' : 'bg-neutral-900 border-neutral-800'}`}
           >
-            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 border-b border-neutral-800 pb-5">
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 border-b border-neutral-800/50 pb-5">
               <div>
                 <h2 className="text-2xl font-bold flex items-center gap-2">
                   <span className="capitalize">{strategy.replace("-", " ")}</span> Synergy
@@ -440,20 +440,20 @@ export default function Home() {
                   {activeBuild.perks.map((perkName, i) => {
                     const perkInfo = getPerkInfo(perkName);
                     return (
-                      <div key={i} className="relative group aspect-square bg-gradient-to-b from-neutral-800 to-neutral-800/50 border border-neutral-700/50 rounded-xl p-4 flex flex-col items-center justify-center text-center hover:border-neutral-500 transition-all hover:-translate-y-1 hover:shadow-lg z-10 hover:z-50">
-                        <div className="w-16 h-16 bg-neutral-900 rotate-45 mb-4 flex items-center justify-center shadow-inner overflow-hidden border-2 border-neutral-700/50 group-hover:border-neutral-500 transition-colors">
-                          <AssetIcon name={perkName} type="perks" className="-rotate-45 w-[140%] h-[140%] max-w-none drop-shadow-2xl object-contain object-center scale-110" />
+                      <div key={i} className={`relative group aspect-square border border-neutral-700/50 rounded-xl p-4 flex flex-col items-center justify-center text-center hover:border-neutral-500 transition-all hover:-translate-y-1 hover:shadow-lg z-10 hover:z-50 ${role === 'survivor' ? 'bg-neutral-800/30 backdrop-blur-sm' : 'bg-gradient-to-b from-neutral-800 to-neutral-800/50'}`}>
+                          <div className="w-16 h-16 bg-neutral-900 rotate-45 mb-4 flex items-center justify-center shadow-inner overflow-hidden border-2 border-neutral-700/50 group-hover:border-neutral-500 transition-colors">
+                            <AssetIcon name={perkName} type="perks" className="-rotate-45 w-[140%] h-[140%] max-w-none drop-shadow-2xl object-contain object-center scale-110 opacity-100" />
+                          </div>
+
+                        {/* Name label beneath the perk */}
+                        <span className="text-sm font-bold text-neutral-200 mt-2 leading-tight z-10 drop-shadow-md">{perkName}</span>
+                        
+                        {/* Hover Tooltip - Ensure tooltip is properly layered and readable */}
+                        <div className="absolute top-full mt-3 w-64 p-4 bg-neutral-900 border border-neutral-600 rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all shadow-2xl z-50 pointer-events-none flex flex-col gap-3">
+                          <p className="font-bold text-sm text-blue-400 border-b border-neutral-700 pb-2">{perkInfo.name}</p>
+                          <p className="text-xs text-neutral-300 text-left leading-relaxed">{perkInfo.descEn}</p>
+                          <p className="text-xs text-neutral-400 text-right leading-relaxed font-bold" dir="rtl">{perkInfo.descAr}</p>
                         </div>
-                      
-                      {/* Name label beneath the perk */}
-                      <span className="text-sm font-bold text-neutral-200 mt-2 leading-tight z-10">{perkName}</span>
-                      
-                      {/* Hover Tooltip - Ensure tooltip is properly layered and readable */}
-                      <div className="absolute top-full mt-3 w-64 p-4 bg-neutral-900 border border-neutral-600 rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all shadow-2xl z-50 pointer-events-none flex flex-col gap-3">
-                        <p className="font-bold text-sm text-blue-400 border-b border-neutral-700 pb-2">{perkInfo.name}</p>
-                        <p className="text-xs text-neutral-300 text-left leading-relaxed">{perkInfo.descEn}</p>
-                        <p className="text-xs text-neutral-400 text-right leading-relaxed font-bold" dir="rtl">{perkInfo.descAr}</p>
-                      </div>
                     </div>
                     );
                   })}
@@ -466,8 +466,8 @@ export default function Home() {
                   <div className="w-2 h-2 rounded-full bg-neutral-600" />
                   {role === "survivor" ? "Optimal Item Setup" : "Recommended Add-ons"}
                 </h3>
-                <div className="bg-neutral-950/50 rounded-xl p-5 border border-neutral-800/80 flex flex-col md:flex-row items-center gap-6">
-                  
+                <div className={`${role === 'survivor' ? 'bg-neutral-950/30' : 'bg-neutral-950/50'} rounded-xl p-5 border border-neutral-800/80 flex flex-col md:flex-row items-center gap-6`}>
+
                   <div className="flex-1 flex flex-col md:flex-row items-center gap-4 text-center md:text-left w-full">
                     <div className="w-16 h-16 bg-neutral-900 border border-neutral-700/50 rounded flex items-center justify-center shadow-inner group overflow-hidden shrink-0">
                       <AssetIcon 
@@ -486,11 +486,11 @@ export default function Home() {
                   
                   <div className="flex-[2] grid grid-cols-1 md:grid-cols-2 gap-3 w-full">
                     {activeBuild.equipment.addons.map((addon, i) => (
-                      <div key={i} className="bg-neutral-900 border border-neutral-800 p-3 rounded-lg flex items-center gap-4 hover:bg-neutral-800 transition-colors">
+                      <div key={i} className={`${role === 'survivor' ? 'bg-neutral-900/40' : 'bg-neutral-900'} border border-neutral-800 p-3 rounded-lg flex items-center gap-4 hover:bg-neutral-800/80 transition-colors`}>
                         <div className="w-8 h-8 bg-neutral-800 rounded flex-shrink-0 border border-neutral-700 overflow-hidden">
-                          <AssetIcon name={addon} type="addons" className="w-full h-full" />
+                          <AssetIcon name={addon} type="addons" className="w-full h-full opacity-100" />
                         </div>
-                        <span className="font-semibold text-neutral-300 text-sm">{addon}</span>
+                        <span className="font-semibold text-neutral-300 text-sm drop-shadow-md">{addon}</span>
                       </div>
                     ))}
                   </div>
