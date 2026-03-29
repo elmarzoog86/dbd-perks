@@ -301,7 +301,7 @@ export default function Home() {
       <main 
         className="min-h-screen text-neutral-100 p-4 md:p-8 flex flex-col items-center justify-start py-12 font-sans transition-all duration-700 bg-neutral-950"
         style={{
-          backgroundImage: role === "survivor" ? `linear-gradient(to bottom, rgba(10, 10, 10, 0.4), rgba(10, 10, 10, 0.6)), url('/survivor-bg.png')` : 'none',
+          backgroundImage: `linear-gradient(to bottom, rgba(10, 10, 10, 0.4), rgba(10, 10, 10, 0.6)), url('/${role}-bg.png')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed',
@@ -412,7 +412,7 @@ export default function Home() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.98, y: -15 }}
             transition={{ duration: 0.2 }}
-            className={`rounded-2xl p-6 md:p-8 border shadow-xl transition-colors duration-500 relative z-10 ${role === 'survivor' ? 'bg-neutral-900/20 border-neutral-800/30 backdrop-blur-md' : 'bg-neutral-900 border-neutral-800'}`}
+            className={`rounded-2xl p-6 md:p-8 border shadow-xl transition-colors duration-500 relative z-10 bg-neutral-900/20 border-neutral-800/30 backdrop-blur-md`}
           >
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 border-b border-neutral-800/50 pb-5">
               <div>
@@ -440,8 +440,8 @@ export default function Home() {
                   {activeBuild.perks.map((perkName, i) => {
                     const perkInfo = getPerkInfo(perkName);
                     return (
-                      <div key={i} className={`relative group aspect-square border border-neutral-700/50 rounded-xl p-4 flex flex-col items-center justify-center text-center hover:border-neutral-500 transition-all hover:-translate-y-1 hover:shadow-lg z-10 hover:z-50 ${role === 'survivor' ? 'bg-neutral-800/10 backdrop-blur-sm' : 'bg-gradient-to-b from-neutral-800 to-neutral-800/50'}`}>
-                          <div className={`w-16 h-16 rotate-45 mb-4 flex items-center justify-center shadow-inner overflow-hidden border-2 border-neutral-700/50 group-hover:border-neutral-500 transition-colors ${role === 'survivor' ? 'bg-neutral-900/60 backdrop-blur-md' : 'bg-neutral-900'}`}>
+                      <div key={i} className={`relative group aspect-square border border-neutral-700/50 rounded-xl p-4 flex flex-col items-center justify-center text-center hover:border-neutral-500 transition-all hover:-translate-y-1 hover:shadow-lg z-10 hover:z-50 bg-neutral-800/10 backdrop-blur-sm`}>
+                          <div className={`w-16 h-16 rotate-45 mb-4 flex items-center justify-center shadow-inner overflow-hidden border-2 border-neutral-700/50 group-hover:border-neutral-500 transition-colors bg-neutral-900/60 backdrop-blur-md`}>
                             <AssetIcon name={perkName} type="perks" className="-rotate-45 w-[140%] h-[140%] max-w-none drop-shadow-2xl object-contain object-center scale-110 opacity-100" />
                           </div>
 
@@ -466,33 +466,20 @@ export default function Home() {
                   <div className="w-2 h-2 rounded-full bg-neutral-600" />
                   {role === "survivor" ? "Optimal Item Setup" : "Recommended Add-ons"}
                 </h3>
-                <div className={`${role === 'survivor' ? 'bg-neutral-950/10 backdrop-blur-sm' : 'bg-neutral-950/50'} rounded-xl p-5 border border-neutral-800/80 flex flex-col md:flex-row items-center gap-6`}>
-
-                  <div className="flex-1 flex flex-col md:flex-row items-center gap-4 text-center md:text-left w-full">
-                    <div className={`w-16 h-16 border border-neutral-700/50 rounded flex items-center justify-center shadow-inner group overflow-hidden shrink-0 ${role === 'survivor' ? 'bg-neutral-900/60 backdrop-blur-md' : 'bg-neutral-900'}`}>
-                      <AssetIcon
-                        name={activeBuild.equipment.name}
-                        type={role === "survivor" ? "items" : "powers"}
-                        className="w-full h-full object-contain p-1 opacity-90 group-hover:scale-110 group-hover:opacity-100 transition-all drop-shadow-md"
-                      />
-                    </div>
-                    <div>
-                      <p className="text-lg font-bold text-white leading-tight">{activeBuild.equipment.name}</p>
-                      <p className="text-sm font-medium text-neutral-500 mt-1">{role === "survivor" ? "Held Item" : "Killer Power"}</p>
-                    </div>
+                <div className="bg-neutral-950/10 backdrop-blur-sm rounded-xl p-5 border border-neutral-800/80 flex flex-col md:flex-row items-center gap-6">
+                  
+                  {/* Item/Power Icon */}
+                  <div className="w-16 h-16 border border-neutral-700/50 rounded flex items-center justify-center shadow-inner group overflow-hidden shrink-0 bg-neutral-900/60 backdrop-blur-md">
+                    <AssetIcon 
+                      name={activeBuild.equipment.name} 
+                      type={role === "survivor" ? "items" : "powers"} 
+                      className="w-12 h-12 rotate-[-5deg] group-hover:rotate-0 transition-transform opacity-100 drop-shadow-xl" 
+                    />
                   </div>
                   
-                  <div className="hidden md:block w-px self-stretch bg-neutral-800"></div>
-                  
-                  <div className="flex-[2] grid grid-cols-1 md:grid-cols-2 gap-3 w-full">
-                    {activeBuild.equipment.addons.map((addon, i) => (
-                      <div key={i} className={`${role === 'survivor' ? 'bg-neutral-900/20 backdrop-blur-sm' : 'bg-neutral-900'} border border-neutral-800 p-3 rounded-lg flex items-center gap-4 hover:bg-neutral-800/80 transition-colors`}>
-                        <div className={`w-8 h-8 rounded flex-shrink-0 border border-neutral-700 overflow-hidden ${role === 'survivor' ? 'bg-transparent' : 'bg-neutral-800'}`}>
-                          <AssetIcon name={addon} type="addons" className="w-full h-full opacity-100" />
-                        </div>
-                        <span className="font-semibold text-neutral-300 text-sm drop-shadow-md">{addon}</span>
-                      </div>
-                    ))}
+                  <div className="flex-1 w-full text-center md:text-left">
+                    <span className="font-bold text-white text-lg block drop-shadow-md">{activeBuild.equipment.name}</span>
+                    <p className="text-sm font-medium text-neutral-500 mt-1">{role === "survivor" ? "Held Item" : "Killer Power"}</p>
                   </div>
                 </div>
               </div>
