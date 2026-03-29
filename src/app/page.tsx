@@ -297,11 +297,17 @@ export default function Home() {
     </button>
   );
 
-  return (
-    <main className="min-h-screen bg-neutral-950 text-neutral-100 p-4 md:p-8 flex flex-col items-center justify-start py-12 font-sans">
-      <div className="max-w-4xl w-full space-y-10">
-        
-        <header className="text-center space-y-3">
+    return (
+      <main 
+        className="min-h-screen text-neutral-100 p-4 md:p-8 flex flex-col items-center justify-start py-12 font-sans transition-all duration-700 bg-neutral-950"
+        style={{
+          backgroundImage: role === "survivor" ? `linear-gradient(to bottom, rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.95)), url('/survivor-bg.jpg')` : 'none',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed',
+        }}
+      >
+        <div className="max-w-4xl w-full space-y-10">        <header className="text-center space-y-3">
           <h1 className="text-5xl font-extrabold tracking-tight bg-gradient-to-br from-red-600 to-red-900 bg-clip-text text-transparent drop-shadow-sm">
             DbD Build Crafter
           </h1>
