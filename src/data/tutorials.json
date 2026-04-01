@@ -1,121 +1,282 @@
 {
   "The Trapper": {
-    "territorial": "Lock down a 3-gen area early. Set traps on key loops and tall grass. Play defensive.",
-    "basement": "Get an early down near the basement or use Agitation to carry them. Trap the entrances heavily."
+    "territorial": "As The Trapper, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Trapper's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Trapper's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Trapper excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Trapper requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   },
   "The Wraith": {
-    "hit-and-run": "Uncloak, get a quick hit, and cloak again to drop chase. Keep applying map-wide pressure until everyone is injured."
+    "territorial": "As The Wraith, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Wraith's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Wraith's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Wraith excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Wraith requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   },
   "The Hillbilly": {
-    "lethal-chase": "Use your sprint to cross the map quickly. Rely on Bamboozle to force survivors into the open."
+    "territorial": "As The Hillbilly, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Hillbilly's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Hillbilly's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Hillbilly excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Hillbilly requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   },
   "The Nurse": {
-    "aura-slugging": "Use Lethal Pursuer to start your first chase instantly. Blink to auras revealed by Infectious Fright."
+    "territorial": "As The Nurse, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Nurse's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Nurse's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Nurse excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Nurse requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   },
   "The Shape": {
-    "tombstone": "Play passively early on. Stalk as much as possible until you pop Tier 3, then surprise them with instant kills.",
-    "scratched-mirror": "With 0 terror radius, see survivor auras through walls and ambush them around corners. Avoid standard loops."
+    "territorial": "As The Shape, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Shape's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Shape's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Shape excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Shape requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   },
   "The Hag": {
-    "territorial": "Set up a triangle of 3 generators early. Place your traps tightly around loops and choke points in that area."
+    "territorial": "As The Hag, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Hag's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Hag's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Hag excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Hag requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   },
   "The Doctor": {
-    "impossible-skillcheck": "Shock survivors constantly to keep them in Madness Tier 2 or 3. Their skill checks will be very difficult."
+    "territorial": "As The Doctor, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Doctor's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Doctor's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Doctor excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Doctor requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   },
   "The Huntress": {
-    "aura-sniper": "Aura reading is your bread and butter. Look for distant targets and practice long-range hatchet throws."
+    "territorial": "As The Huntress, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Huntress's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Huntress's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Huntress excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Huntress requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   },
   "The Cannibal": {
-    "basement-defense": "Get an early basement hook. If survivors come for a save, rev your chainsaw at the stairs."
+    "territorial": "As The Cannibal, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Cannibal's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Cannibal's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Cannibal excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Cannibal requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   },
   "The Nightmare": {
-    "endgame": "Play a normal match, but prepare for the exit gates. Blood Warden and No Way Out give you massive snowball potential."
+    "territorial": "As The Nightmare, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Nightmare's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Nightmare's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Nightmare excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Nightmare requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   },
   "The Pig": {
-    "headtrap-stall": "Sneak up on survivors to secure an early down. Apply a Reverse Bear Trap immediately, forcing them to search boxes."
+    "territorial": "As The Pig, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Pig's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Pig's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Pig excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Pig requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   },
   "The Clown": {
-    "chase-denial": "Throw a pink bottle at loops to slow them down, and use your yellow bottle for a speed boost."
+    "territorial": "As The Clown, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Clown's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Clown's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Clown excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Clown requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   },
   "The Spirit": {
-    "hit-and-run": "Phase walk toward generators to get quick first hits. Listen closely since they cannot hear you approaching."
+    "territorial": "As The Spirit, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Spirit's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Spirit's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Spirit excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Spirit requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   },
   "The Legion": {
-    "mend-simulator": "Use Feral Frenzy to injure multiple survivors quickly. Apply deep wounds to everyone to waste their time."
+    "territorial": "As The Legion, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Legion's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Legion's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Legion excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Legion requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   },
   "The Plague": {
-    "anti-heal": "Vomit on generators, pallets, and survivors. Force them to stay broken. Grab Corrupt Purge if they dare cleanse."
+    "territorial": "As The Plague, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Plague's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Plague's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Plague excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Plague requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   },
   "The Ghost Face": {
-    "stealth-stalk": "Lean around corners to stalk survivors faster. 99% their stalk meter, then expose and instadown them out of nowhere."
+    "territorial": "As The Ghost Face, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Ghost Face's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Ghost Face's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Ghost Face excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Ghost Face requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   },
   "The Demogorgon": {
-    "portal-pressure": "Place portals near high-traffic generators. Use shred to break pallets instantly or catch survivors locked in vault animations."
+    "territorial": "As The Demogorgon, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Demogorgon's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Demogorgon's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Demogorgon excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Demogorgon requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   },
   "The Oni": {
-    "slug-snowball": "Hit survivors early to gather blood. Unleash Blood Fury to instadown multiple targets across the map."
+    "territorial": "As The Oni, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Oni's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Oni's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Oni excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Oni requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   },
   "The Deathslinger": {
-    "ranged-zoning": "Shoot survivors over short loops and pull them in for a hit. Reload quickly and keep punishing greed."
+    "territorial": "As The Deathslinger, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Deathslinger's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Deathslinger's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Deathslinger excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Deathslinger requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   },
   "The Executioner": {
-    "cages-torment": "Force survivors onto your Torment trails at loops so you can send them to Cages of Atonement."
+    "territorial": "As The Executioner, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Executioner's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Executioner's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Executioner excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Executioner requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   },
   "The Blight": {
-    "lethal-rush": "Bounce off geometry to catch up to survivors incredibly fast. Predict their movement and strike."
+    "territorial": "As The Blight, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Blight's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Blight's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Blight excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Blight requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   },
   "The Twins": {
-    "slug-camp": "Use Victor to scout and down injured survivors, leaving Charlotte to defend hooks and important generators."
+    "territorial": "As The Twins, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Twins's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Twins's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Twins excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Twins requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   },
   "The Trickster": {
-    "chase-denial": "Throw knives to slowly build up Laceration on survivors until they take a health state of damage."
+    "territorial": "As The Trickster, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Trickster's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Trickster's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Trickster excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Trickster requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   },
   "The Nemesis": {
-    "rapid-fire": "Lacerate survivors over low loops with your knives. Keep distance to maximize your punishment over pallets and windows."
+    "territorial": "As The Nemesis, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Nemesis's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Nemesis's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Nemesis excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Nemesis requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   },
   "The Cenobite": {
-    "anti-loop": "Use your chains to slow survivors down at loops. Protect the puzzle box to initiate Chain Hunts continuously."
+    "territorial": "As The Cenobite, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Cenobite's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Cenobite's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Cenobite excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Cenobite requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   },
   "The Artist": {
-    "crow-sniper": "Shoot birds directly at generators to check for survivors, or place them at loops to deny pathing."
+    "territorial": "As The Artist, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Artist's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Artist's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Artist excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Artist requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   },
   "The Onryo": {
-    "tape-condemn": "Teleport constantly to build Condemned on survivors, forcing them to turn off TVs instead of doing generators."
+    "territorial": "As The Onryo, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Onryo's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Onryo's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Onryo excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Onryo requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   },
   "The Dredge": {
-    "nightfall-ambush": "Stay inside lockers near high-activity areas. Utilize Nightfall to strip survivors of their visibility while chasing."
+    "territorial": "As The Dredge, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Dredge's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Dredge's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Dredge excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Dredge requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   },
   "The Mastermind": {
-    "zombie-pressure": "Whip survivors over pallets with your tentacle. Use the zombies to patrol areas passively while you chase."
+    "territorial": "As The Mastermind, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Mastermind's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Mastermind's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Mastermind excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Mastermind requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   },
   "The Knight": {
-    "jailer-patrol": "Send out your guards to check generators or break pallets for you. Pincer survivors between you and your guards."
+    "territorial": "As The Knight, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Knight's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Knight's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Knight excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Knight requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   },
   "The Skull Merchant": {
-    "drone-defense": "Place drones on important generators and choke points. Chase survivors into your active drone zones to expose them."
+    "territorial": "As The Skull Merchant, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Skull Merchant's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Skull Merchant's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Skull Merchant excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Skull Merchant requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   },
   "The Singularity": {
-    "slipstream-chase": "Shoot your pods at high vantage points. Mark survivors with slipstream to teleport instantly behind them in chases."
+    "territorial": "As The Singularity, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Singularity's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Singularity's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Singularity excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Singularity requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   },
   "The Xenomorph": {
-    "tunnel-ambush": "Use your tunnels to cross the map quickly. Emerge near generators and use your tail strike over loops to hit survivors."
+    "territorial": "As The Xenomorph, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Xenomorph's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Xenomorph's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Xenomorph excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Xenomorph requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   },
   "The Good Guy": {
-    "scamper-chase": "Use Hidey-Ho mode to rapidly close the distance. Scamper under pallets and deliver a massive slicing attack."
+    "territorial": "As The Good Guy, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Good Guy's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Good Guy's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Good Guy excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Good Guy requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   },
   "The Unknown": {
-    "hallucination-snipe": "Launch UVX projectiles at the floor/walls next to survivors. Use your hallucinations to teleport and maintain map presence."
+    "territorial": "As The Unknown, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Unknown's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Unknown's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Unknown excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Unknown requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
+  },
+  "The Lich": {
+    "territorial": "As The Lich, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Lich's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Lich's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Lich excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Lich requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   },
   "The Dark Lord": {
-    "default": "Focus on using your unique power to control loops and apply map pressure."
+    "territorial": "As The Dark Lord, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Dark Lord's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Dark Lord's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Dark Lord excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Dark Lord requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   },
   "The Houndmaster": {
-    "default": "Focus on using your unique power to control loops and apply map pressure."
+    "territorial": "As The Houndmaster, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Houndmaster's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Houndmaster's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Houndmaster excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Houndmaster requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   },
   "The First": {
-    "default": "Focus on using your unique power to control loops and apply map pressure."
+    "territorial": "As The First, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The First's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The First's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The First excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The First requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   },
   "The Animatronic": {
-    "default": "Focus on using your unique power to control loops and apply map pressure."
+    "territorial": "As The Animatronic, secure 3 close generators and patrol them relentlessly. Place your power in high traffic choke points.",
+    "chase": "Use The Animatronic's anti-loop ability at dropping pallets to force them into an immediate hit. Down them fast and hook.",
+    "stealth": "Use The Animatronic's lack of terror radius to get close before initiating the chase. Getting the first hit for free is crucial.",
+    "ranged": "Aim slightly ahead of the survivor's path. The Animatronic excels when punishing locked animations like vaulting or dropping pallets.",
+    "default": "Mastering The Animatronic requires managing your power cooldowns efficiently. Avoid long chases at god-pallets and target weak links."
   }
 }

@@ -1,66 +1,162 @@
 {
-  "default": {
-    "en": "Keep your eyes peeled and avoid unneeded risks. Try to pre-drop pallets if they play aggressively, and focus on generators during long chases.",
-    "ar": "كن يقظاً وتجنب المخاطر غير الضرورية. حاول إسقاط الألواح الخشبية مبكراً إذا كان القاتل عدوانياً، وركز على إصلاح المولدات أثناء المطاردات الطويلة."
-  },
   "The Trapper": {
-    "en": "Watch your step in tall grass and vaulting locations. Try to disarm traps when he is far away or busy carrying someone.",
-    "ar": "انتبه لخطواتك في العشب الطويل وأماكن القفز. حاول إبطال الفخاخ عندما يكون بعيداً أو مشغولاً بحمل ناجٍ آخر."
+    "en": "Counter strategy for The Trapper: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Trapper: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
   },
-  "The Nurse": {
-    "en": "Break line of sight as much as possible. Double back when she charges her blink to throw off her distance.",
-    "ar": "اقطع خط الرؤية قدر الإمكان. تراجع للوراء فجأة عندما تشحن قدرة الانتقال الخاص بها (البلينك) لتضييع مسافتها."
+  "The Wraith": {
+    "en": "Counter strategy for The Wraith: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Wraith: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
   },
   "The Hillbilly": {
-    "en": "Listen for the chainsaw rev. Hug structures tightly and force him to turn at awkward angles.",
-    "ar": "استمع لصوت دوران المنشار. التصق بالهياكل واجبره على الالتفاف بزوايا صعبة لتفادي ضربته."
+    "en": "Counter strategy for The Hillbilly: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Hillbilly: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
+  },
+  "The Nurse": {
+    "en": "Counter strategy for The Nurse: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Nurse: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
   },
   "The Shape": {
-    "en": "Keep looking around. Do not let him stalk you for free to prevent his Tier 3 instadown.",
-    "ar": "استمر في النظر حولك. لا تدعه يراقبك بسهولة لمنعه من الوصول إلى المستوى الثالث الذي يسقطك بضربة واحدة."
+    "en": "Counter strategy for The Shape: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Shape: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
   },
-  "The Ghost Face": {
-    "en": "Reveal him by looking at him when he stalks. Keep your camera moving while on a generator.",
-    "ar": "اكشفه بالنظر إليه عندما يحاول مراقبتك. استمر في تحريك الكاميرا أثناء التواجد على المولد."
+  "The Hag": {
+    "en": "Counter strategy for The Hag: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Hag: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
   },
-  "The Singularity": {
-    "en": "Use the EMPs to disable biopods and remove the slipstream from yourself or teammates.",
-    "ar": "استخدم النبضات الكهرومغناطيسية (EMPs) لتعطيل الكاميرات الحيوية وإزالة المادة اللزجة عنك وعن زملائك."
-  },
-  "The Spirit": {
-    "en": "Listen closely to her phasing sound. Walk instead of running to hide your scratch marks when she phases.",
-    "ar": "استمع جيداً لصوت انتقالها الروحي. امشِ بدلاً من الركض لإخفاء آثار الجري عندما تستخدم قدرتها."
-  },
-  "The Legion": {
-    "en": "Spread out across the map. Do not heal fully against their frenzy, just mend and stay on generators.",
-    "ar": "انتشروا في الخريطة. لا تعالج نفسك بالكامل ضد هجومهم الجنوني، فقط قم بتخييط الجرح والعودة للمولدات."
-  },
-  "The Plague": {
-    "en": "Do not cleanse at fountains unless absolutely necessary (like endgame or everyone is infected and broken).",
-    "ar": "لا تغتسل في النوافير إلا للضرورة القصوى (مثل نهاية اللعبة)، لأن ذلك يمنحها قدرتها القاتلة."
+  "The Doctor": {
+    "en": "Counter strategy for The Doctor: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Doctor: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
   },
   "The Huntress": {
-    "en": "Watch her wind-up animation. Crouch behind low obstacles and break line of sight frequently.",
-    "ar": "راقب حركتها عند التجهيز لرمي الفأس. انحنِ خلف الحواجز القصيرة واقطع خط الرؤية بشكل متكرر."
+    "en": "Counter strategy for The Huntress: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Huntress: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
+  },
+  "The Cannibal": {
+    "en": "Counter strategy for The Cannibal: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Cannibal: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
+  },
+  "The Nightmare": {
+    "en": "Counter strategy for The Nightmare: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Nightmare: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
+  },
+  "The Pig": {
+    "en": "Counter strategy for The Pig: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Pig: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
+  },
+  "The Clown": {
+    "en": "Counter strategy for The Clown: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Clown: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
+  },
+  "The Spirit": {
+    "en": "Counter strategy for The Spirit: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Spirit: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
+  },
+  "The Legion": {
+    "en": "Counter strategy for The Legion: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Legion: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
+  },
+  "The Plague": {
+    "en": "Counter strategy for The Plague: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Plague: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
+  },
+  "The Ghost Face": {
+    "en": "Counter strategy for The Ghost Face: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Ghost Face: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
+  },
+  "The Demogorgon": {
+    "en": "Counter strategy for The Demogorgon: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Demogorgon: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
+  },
+  "The Oni": {
+    "en": "Counter strategy for The Oni: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Oni: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
+  },
+  "The Deathslinger": {
+    "en": "Counter strategy for The Deathslinger: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Deathslinger: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
+  },
+  "The Executioner": {
+    "en": "Counter strategy for The Executioner: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Executioner: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
   },
   "The Blight": {
-    "en": "Watch his rush angles. Spin tightly or hide behind weird collisions so he slides off them.",
-    "ar": "انتبه لزوايا اندفاعه. دُر حوله بسرعة أو اختبئ خلف الأشياء لجعله ينزلق ولا يصيبك."
+    "en": "Counter strategy for The Blight: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Blight: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
+  },
+  "The Twins": {
+    "en": "Counter strategy for The Twins: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Twins: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
+  },
+  "The Trickster": {
+    "en": "Counter strategy for The Trickster: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Trickster: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
+  },
+  "The Nemesis": {
+    "en": "Counter strategy for The Nemesis: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Nemesis: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
+  },
+  "The Cenobite": {
+    "en": "Counter strategy for The Cenobite: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Cenobite: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
+  },
+  "The Artist": {
+    "en": "Counter strategy for The Artist: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Artist: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
+  },
+  "The Onryo": {
+    "en": "Counter strategy for The Onryo: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Onryo: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
+  },
+  "The Dredge": {
+    "en": "Counter strategy for The Dredge: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Dredge: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
+  },
+  "The Mastermind": {
+    "en": "Counter strategy for The Mastermind: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Mastermind: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
+  },
+  "The Knight": {
+    "en": "Counter strategy for The Knight: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Knight: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
+  },
+  "The Skull Merchant": {
+    "en": "Counter strategy for The Skull Merchant: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Skull Merchant: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
+  },
+  "The Singularity": {
+    "en": "Counter strategy for The Singularity: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Singularity: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
+  },
+  "The Xenomorph": {
+    "en": "Counter strategy for The Xenomorph: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Xenomorph: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
+  },
+  "The Good Guy": {
+    "en": "Counter strategy for The Good Guy: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Good Guy: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
+  },
+  "The Unknown": {
+    "en": "Counter strategy for The Unknown: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Unknown: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
+  },
+  "The Lich": {
+    "en": "Counter strategy for The Lich: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Lich: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
   },
   "The Dark Lord": {
-    "en": "Pay attention to their power cues and try to break line of sight.",
-    "ar": "انتبه لإشارات قدرتهم وحاول قطع خط الرؤية قدر الإمكان."
+    "en": "Counter strategy for The Dark Lord: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Dark Lord: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
   },
   "The Houndmaster": {
-    "en": "Pay attention to their power cues and try to break line of sight.",
-    "ar": "انتبه لإشارات قدرتهم وحاول قطع خط الرؤية قدر الإمكان."
+    "en": "Counter strategy for The Houndmaster: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Houndmaster: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
   },
   "The First": {
-    "en": "Pay attention to their power cues and try to break line of sight.",
-    "ar": "انتبه لإشارات قدرتهم وحاول قطع خط الرؤية قدر الإمكان."
+    "en": "Counter strategy for The First: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The First: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
   },
   "The Animatronic": {
-    "en": "Pay attention to their power cues and try to break line of sight.",
-    "ar": "انتبه لإشارات قدرتهم وحاول قطع خط الرؤية قدر الإمكان."
+    "en": "Counter strategy for The Animatronic: Identify their unique power mechanics and adapt early. They rely heavily on specific map geometry to win chases. Don't clump up on generators.",
+    "ar": "استراتيجية لـ The Animatronic: تعرف على ميكانيكا القوة الفريدة الخاصة بهم وتكيف مبكراً. تجنب التجمع على نفس المولدات لإبعاد الضغط."
   }
 }

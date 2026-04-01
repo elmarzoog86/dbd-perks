@@ -290,9 +290,10 @@ export default function Home() {
     if (!name) return `https://ui-avatars.com/api/?name=?&background=1a1a1a&color=fff`;
 
     const rawId = name.toLowerCase().replace(/&/g, "and").replace(/[\s\:\'\-\!\?\.\,]/g, "");
+    const cleanId = rawId.replace(/^(hex|boon|scourgehook|invocation|teamwork|bloodweb)/, "");
     
     // Convert generic lookup type into dictionary prefixes
-    const prefixes = type === "perks" ? ["iconperks_"] : 
+    const prefixes = type === "perks" ? ["iconperks_", "t_iconperks_"] : 
                      type === "addons" ? ["iconaddon_", "icons_addon_"] : 
                      ["iconitems_", "iconpower_", "iconfavors_"];
 
@@ -300,16 +301,31 @@ export default function Home() {
     const dictionary = iconsMap as Record<string, string>;
     
     // First, try exact prefix match
+    const searchIds = [rawId, cleanId];
     for (const prefix of prefixes) {
-      if (dictionary[`${prefix}${rawId}`]) {
-         return `https://raw.githubusercontent.com/Icon-Pack-Provider/Dead-by-daylight-Default-icons/main/${dictionary[`${prefix}${rawId}`]}`;
+      for (const id of searchIds) {
+        const match = dictionary[`${prefix}${id}`];
+        if (match) {
+           if (match.startsWith('/Perks/') || match.startsWith('/Powers/') || match.startsWith('/ItemAddons/')) return match;
+           return `https://raw.githubusercontent.com/Icon-Pack-Provider/Dead-by-daylight-Default-icons/main/${match}`;
+        }
       }
     }
 
     // Second, try generic includes match if spelling is slightly off
-    const keyMatch = Object.keys(dictionary).find(k => k.includes(rawId) && prefixes.some(p => k.startsWith(p)));
+    const keyMatch = Object.keys(dictionary).find(k => {
+      // Must match one of the valid prefixes
+      if (!prefixes.some(p => k.startsWith(p))) return false;
+      
+      const strippedKey = k.replace(/^(t_)?iconperks_|^(iconaddon_)|^(icons_addon_)|^(iconitems_)|^(iconpower_)/, '');
+
+      return searchIds.some(id => k.includes(id) || id.includes(strippedKey));
+    });
+
     if (keyMatch) {
-       return `https://raw.githubusercontent.com/Icon-Pack-Provider/Dead-by-daylight-Default-icons/main/${dictionary[keyMatch]}`;
+       const match = dictionary[keyMatch];
+       if (match.startsWith('/Perks/') || match.startsWith('/Powers/') || match.startsWith('/ItemAddons/')) return match;
+       return `https://raw.githubusercontent.com/Icon-Pack-Provider/Dead-by-daylight-Default-icons/main/${match}`;
     }
 
     // Fallback if the image simply isn't in the massive DB
@@ -553,13 +569,15 @@ export default function Home() {
                     </h2>
                     <p className="text-neutral-500 text-sm mt-1">Recommended setup for maximum efficiency</p>
                   </div>
-                  <button 
-                    onClick={handleRefresh}
-                    className="flex items-center gap-2 px-5 py-2.5 bg-neutral-800 hover:bg-neutral-700 active:bg-neutral-600 rounded-lg text-sm font-semibold transition-colors text-white border border-neutral-700"
-                  >
-                    <RefreshCw size={18} />
-                    Refresh Build
-                  </button>
+                  {currentAvailableBuilds.length > 1 && (
+                    <button 
+                      onClick={handleRefresh}
+                      className="flex items-center gap-2 px-5 py-2.5 bg-neutral-800 hover:bg-neutral-700 active:bg-neutral-600 rounded-lg text-sm font-semibold transition-colors text-white border border-neutral-700"
+                    >
+                      <RefreshCw size={18} />
+                      Refresh Build
+                    </button>
+                  )}
                 </div>
 
                 <div className="space-y-8">
@@ -572,15 +590,13 @@ export default function Home() {
                       {activeBuild.perks.map((perkName, i) => {
                         const perkInfo = getPerkInfo(perkName);
                         return (
-                          <div key={i} className={`relative group aspect-square border border-neutral-700/50 rounded-xl p-4 flex flex-col items-center justify-center text-center hover:border-neutral-500 transition-all hover:-translate-y-1 hover:shadow-lg z-10 hover:z-50 bg-neutral-800/10 backdrop-blur-sm`}>
-                              <div className={`w-16 h-16 rotate-45 mb-4 flex items-center justify-center shadow-inner overflow-hidden border-2 border-neutral-700/50 group-hover:border-neutral-500 transition-colors bg-neutral-900/60 backdrop-blur-md`}>
-                                <AssetIcon name={perkName} type="perks" className="-rotate-45 w-[140%] h-[140%] max-w-none drop-shadow-2xl object-contain object-center scale-110 opacity-100" />
+                          <div key={i} className={`relative group aspect-square border-0 rounded-xl p-4 flex flex-col items-center justify-center text-center transition-all hover:-translate-y-1 z-10 hover:z-50`}>
+                              <div className={`w-16 h-16 rotate-45 mb-6 flex items-center justify-center shadow-[0_0_10px_rgba(168,85,247,0.5)] overflow-hidden border-[2px] border-[#c87bff] group-hover:border-[#e2b5ff] group-hover:shadow-[0_0_20px_rgba(168,85,247,0.9)] transition-all bg-gradient-to-br from-[#7e25a7] via-[#541474] to-[#260538]`}>
+                                <AssetIcon name={perkName} type="perks" className="-rotate-45 w-[140%] h-[140%] max-w-none drop-shadow-[2px_2px_4px_rgba(0,0,0,0.8)] object-contain object-center scale-110 opacity-100" />
                               </div>
 
                             {/* Name label beneath the perk */}
-                            <span className="text-sm font-bold text-neutral-200 mt-2 leading-tight z-10 drop-shadow-md">{perkName}</span>
-                            
-                            {/* Hover Tooltip - Ensure tooltip is properly layered and readable */}
+                            <span className="text-sm font-bold text-neutral-200 mt-2 leading-tight z-10 drop-shadow-md">{perkName}</span>                            {/* Hover Tooltip - Ensure tooltip is properly layered and readable */}
                             <div className="absolute top-full mt-3 w-64 p-4 bg-neutral-900 border border-neutral-600 rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all shadow-2xl z-50 pointer-events-none flex flex-col gap-3">
                               <p className="font-bold text-sm text-blue-400 border-b border-neutral-700 pb-2">{perkInfo.name}</p>
                               <p className="text-xs text-neutral-300 text-left leading-relaxed">{perkInfo.descEn}</p>
@@ -634,6 +650,20 @@ export default function Home() {
             </AnimatePresence>
           </div>
         )}
+
+        {/* Footer / Credits */}
+        <div className="mt-12 pb-8 text-center flex flex-col items-center gap-3 animate-in fade-in duration-700 delay-300">
+          <p className="text-neutral-400 font-medium tracking-wide">Done by : <span className="text-neutral-200 font-bold">StigQ8</span></p>
+          <a 
+            href="https://www.twitch.tv/stigq8" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-5 py-2.5 bg-[#9146FF] hover:bg-[#a970ff] text-white rounded-xl font-bold transition-all hover:-translate-y-1 shadow-lg shadow-[#9146FF]/20 ring-1 ring-[#9146FF]/50"
+          >
+            <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/></svg>
+            Twitch Channel
+          </a>
+        </div>
 
       </div>
     </main>
