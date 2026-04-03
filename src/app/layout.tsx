@@ -14,10 +14,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Create Your Build",
+  title: "DBD Builds",
   description: "The Best Dead by Daylight Builds",
   icons: {
-    icon: "/portraits/The_Unknown.png"
+    icon: "/Perks/iconPerks_NoOneEscapesDeath.png"
   }
 };
 
