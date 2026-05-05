@@ -138,7 +138,7 @@ const PERKS_DB: Record<string, PerkInfo> = {
   "Sloppy Butcher": {"name":"Sloppy Butcher","descEn":"Basic attacks cause Hemorrhage and Mangled effects, slowing their healing.","descAr":"الضربات العادية تسبب النزيف وصعوبة الالتئام، مما يبطئ من علاج الناجين."},
   "A Nurse's Calling": {"name":"A Nurse's Calling","descEn":"Reveals the auras of survivors nearby who are healing or being healed.","descAr":"يكشف عن هالات الناجين القريبين الذين يعالجون بعضهم أو يتم معالجتهم."},
   "Make Your Choice": {"name":"Make Your Choice","descEn":"The rescuer of a survivor becomes exposed (one-hit down) if you are far enough away.","descAr":"يكون المنقذ عرضة للسقوط بضربة واحدة إذا كنت بعيداً عن الخطاف."},
-  "Jolt": {"name":"Jolt","descEn":"Downing a survivor explodes all generators within 32 meters, losing progress.","descAr":"إسقاط ناجٍ يفجر جميع المولدات بمحيط 32 متراً ويفقدها تقدمها تلقائياً."},
+  "Surge": {"name":"Surge","descEn":"Downing a survivor explodes all generators within 32 meters, losing progress.","descAr":"إسقاط ناجٍ يفجر جميع المولدات بمحيط 32 متراً ويفقدها تقدمها تلقائياً."},
   "Enduring": {"name":"Enduring","descEn":"Reduces the stun duration from pallets significantly.","descAr":"يقلل مدة الدوار المتلقى من سقوط الألواح الخشبية بشكل كبير."},
   "Spirit Fury": {"name":"Spirit Fury","descEn":"After breaking pallets, the next pallet that stuns you gets destroyed instantly.","descAr":"بعد تدمير عدد معين من الألواح، يُدمر اللوح القادم الذي يسقط عليك فوراً."},
   "Bamboozle": {"name":"Bamboozle","descEn":"Speeds up your vaulting and blocks the window for a short duration.","descAr":"يسرّع قفزك للنافذة، ويغلق تلك النافذة أمام الناجين لفترة قصيرة."},
@@ -199,7 +199,7 @@ const survivorData: Record<string, Build[]> = {
     { perks: ["Potential Energy", "Overzealous", "Deja Vu", "Sprint Burst"], equipment: { name: "Mechanic's Toolbox", addons: ["Grip Wrench", "Spring Clamp"] } }
   ],
   "haste": [
-    { perks: ["Hope", "Made for This", "Resilience", "Dead Hard"], equipment: { name: "Med-kit", addons: ["Medical Scissors", "Gauze Roll"] } },
+    { perks: ["Decisive Strike", "Off the Record", "Sprint Burst", "Resilience"], equipment: { name: "Med-kit", addons: ["Medical Scissors", "Gauze Roll"] } },
     { perks: ["Sprint Burst", "Vigil", "Fixated", "Champion of Light"], equipment: { name: "Flashlight", addons: ["Battery", "Low Amp Filament"] } }
   ],
   "looping": [
@@ -219,7 +219,7 @@ const killerData: Record<string, Record<string, Build[]>> = {
     "basement": [{ perks: ["Agitation", "Iron Grasp", "Mad Grit", "Awakened Awareness"], equipment: { name: "Bear Trap", addons: ["Iridescent Stone", "Honing Stone"] } }]
   },
   "The Wraith": {
-    "hit-and-run": [{ perks: ["Sloppy Butcher", "A Nurse's Calling", "Make Your Choice", "Jolt"], equipment: { name: "Wailing Bell", addons: ["Bone Clapper", "Windstorm - Blood"] } }]
+    "hit-and-run": [{ perks: ["Sloppy Butcher", "A Nurse's Calling", "Make Your Choice", "Surge"], equipment: { name: "Wailing Bell", addons: ["Bone Clapper", "Windstorm - Blood"] } }]
   },
   "The Hillbilly": {
     "lethal-chase": [{ perks: ["Enduring", "Spirit Fury", "Bamboozle", "Tinkerer"], equipment: { name: "Chainsaw", addons: ["Lo Pro Chains", "Doom Engravings"] } }]
@@ -253,7 +253,7 @@ const killerData: Record<string, Record<string, Build[]>> = {
     "chase-denial": [{ perks: ["Save the Best for Last", "Pop Goes the Weasel", "Bamboozle", "Enduring"], equipment: { name: "The Afterpiece Tonic", addons: ["Tattoo's Middle Finger", "Garish Makeup Kit"] } }]
   },
   "The Spirit": {
-    "hit-and-run": [{ perks: ["Sloppy Butcher", "Stridor", "A Nurse's Calling", "Jolt"], equipment: { name: "Yamaoka's Haunting", addons: ["Mother-Daughter Ring", "Dried Cherry Blossom"] } }]
+    "hit-and-run": [{ perks: ["Sloppy Butcher", "Stridor", "A Nurse's Calling", "Surge"], equipment: { name: "Yamaoka's Haunting", addons: ["Mother-Daughter Ring", "Dried Cherry Blossom"] } }]
   },
   "The Legion": {
     "mend-simulator": [{ perks: ["Thanatophobia", "Dying Light", "Hex: Ruin", "Scourge Hook: Pain Resonance"], equipment: { name: "Feral Frenzy", addons: ["Iridescent Button", "Fuming Mixtape"] } }]
@@ -325,7 +325,7 @@ const killerData: Record<string, Record<string, Build[]>> = {
     "versatile-form": [{ perks: ["Dark Arrogance", "Lethal Pursuer", "Pop Goes the Weasel", "Scourge Hook: Pain Resonance"], equipment: { name: "Wolf, Bat, Mist", addons: ["Watchful Eye", "Lapis Lazuli"] } }]
   },
   "The Houndmaster": {
-    "scent-tracker": [{ perks: ["Discordance", "Lethal Pursuer", "Jolt", "Save the Best for Last"], equipment: { name: "Falconer", addons: ["Leather Glove", "Scent Tracker"] } }]
+    "scent-tracker": [{ perks: ["Discordance", "Lethal Pursuer", "Surge", "Save the Best for Last"], equipment: { name: "Falconer", addons: ["Leather Glove", "Scent Tracker"] } }]
   },
   "The First": {
     "primal-fear": [{ perks: ["Corrupt Intervention", "Nowhere to Hide", "Sloppy Butcher", "No Way Out"], equipment: { name: "Primal Roar", addons: ["Torn Cloth", "Sharp Claws"] } }]
