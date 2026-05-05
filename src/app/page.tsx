@@ -456,7 +456,7 @@ export default function Home() {
           <h1 className="text-5xl font-extrabold tracking-tight bg-gradient-to-br from-red-600 to-red-900 bg-clip-text text-transparent drop-shadow-sm">
             DBD Builds
           </h1>
-          <p className="text-neutral-400 text-lg">Generate top-tier meta builds for the current patch</p>
+          <p className="text-neutral-400 text-lg">Generate top-tier meta builds for the current patch (May 2026)</p>
         </header>
 
         {/* Role Selection */}
